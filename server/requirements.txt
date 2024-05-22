@@ -1,0 +1,8 @@
+torch
+torchvision
+tqdm
+requests
+fastapi
+uvicorn
+opencv-python-headless
+python-multipart

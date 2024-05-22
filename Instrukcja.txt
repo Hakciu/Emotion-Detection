@@ -1,0 +1,17 @@
+1. Instalowanie bibliotek:
+w /server/ jest plik z wymaganymi bibliotekami, instalujemy go tak:
+pip install -r requirements.txt
+
+
+2. Uruchomienie servera:
+Serwer działa na localhost:8000
+W /server/ wpisujemy tą komendę: 
+uvicorn app:app --reload
+
+
+3. Uruchamianie clienta:
+Client działa na localhost:5173
+W /client/ wpisujemy to jak odpalamy po raz pierwszy:
+npm install 
+Tym uruchamiamy
+npm run dev
