@@ -15,7 +15,7 @@
         text-align: center;
         font-weight: bold;
         margin-bottom: 2.5rem;
-        padding-top: 2rem;
+        padding-top: 1rem;
         text-decoration: none;
         color: #0c1203;
     }
