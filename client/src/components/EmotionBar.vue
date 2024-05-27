@@ -72,4 +72,23 @@
         text-align: left; /* Wyrównanie tekstu do lewej */
         font-weight: bold;
     }
+
+    @media (max-width: 1536px) {
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .bar-container {
+            height: 30px;
+            min-width: 150px;
+        }
+
+        .percentage {
+            font-size: 0.8rem;
+        }
+
+        .emotion-name {
+            min-width: 50px;
+        }
+    }
 </style>

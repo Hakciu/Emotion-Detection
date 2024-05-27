@@ -1,0 +1,37 @@
+{
+    "Angry": [
+        "http://example.com/angry1.jpg",
+        "http://example.com/angry2.jpg",
+        "http://example.com/angry3.jpg"
+    ],
+    "Disgust": [
+        "http://example.com/disgusted1.jpg",
+        "http://example.com/disgusted2.jpg",
+        "http://example.com/disgusted3.jpg"
+    ],
+    "Fear": [
+        "http://example.com/fear1.jpg",
+        "http://example.com/fear2.jpg",
+        "http://example.com/fear3.jpg"
+    ],
+    "Happy": [
+        "http://example.com/happy1.jpg",
+        "http://example.com/happy2.jpg",
+        "http://example.com/happy3.jpg"
+    ],
+    "Sad": [
+        "http://example.com/sad1.jpg",
+        "http://example.com/sad2.jpg",
+        "http://example.com/sad3.jpg"
+    ],
+    "Surprise": [
+        "http://example.com/surprised1.jpg",
+        "http://example.com/surprised2.jpg",
+        "http://example.com/surprised3.jpg"
+    ],
+    "Neutral": [
+        "http://example.com/neutral1.jpg",
+        "http://example.com/neutral2.jpg",
+        "http://example.com/neutral3.jpg"
+    ]
+}

@@ -5,6 +5,10 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 from PIL import Image
 import io
+import json
+import random
+from fastapi.responses import JSONResponse
+import uvicorn
 
 from AI.model import EmotionCNN
 
@@ -69,6 +73,24 @@ async def predict(file: UploadFile = File(...)):
     except Exception as e:
         print("Error processing the image:", str(e))
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+
+# Load memes from JSON file
+with open("memes.json", "r") as file:
+    memes = json.load(file)
+
+@app.get("/random_meme/{emotion}")
+async def random_meme(emotion: str):
+    print(f"Received request for emotion: {emotion}")
+    if emotion in memes:
+        meme_url = random.choice(memes[emotion])
+        print(f"Selected meme URL: {meme_url}")
+        return {"url": meme_url}
+    else:
+        print("No memes found for emotion:", emotion)
+        return {"url": None}
+
 
 if __name__ == '__main__':
     import uvicorn
