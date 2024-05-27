@@ -1,6 +1,6 @@
 <template>
     <div class="howItWorks">
-        <h1>How it works</h1>
+        <h1>How it works?</h1>
         <p>
             This project showcases an emotion detection application built using
             Artificial Intelligence (AI) with PyTorch. The core of this
@@ -52,6 +52,9 @@
 </template>
 
 <style scoped>
+    h1 {
+        font-family: Roboto, sans-serif;
+    }
     .howItWorks {
         max-width: 800px;
         margin: 0 auto;
@@ -74,6 +77,7 @@
         justify-content: center;
         margin-top: 2rem;
         font-family: 'Poetsen One', sans-serif;
+        margin-bottom: 2rem;
     }
 
     .howitworks {
