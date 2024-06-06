@@ -1,3 +1,12 @@
+"""
+This script trains a convolutional neural network (CNN) model for emotion detection.
+It uses the ImageFolder dataset from torchvision to load and preprocess the data.
+The model architecture is defined in the 'model' module, and the helper functions are defined in the 'helper_functions' module.
+The training loop consists of multiple epochs, where each epoch iterates over the training data and updates the model parameters.
+After each epoch, the model is evaluated on the test data to monitor its performance.
+The trained model is saved to a file specified by the 'MODEL_PATH' variable.
+"""
+
 import os
 import torch
 import torch.nn as nn
@@ -5,7 +14,6 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder
-
 
 from model import EmotionCNN
 from helper_functions import accuracy_fn

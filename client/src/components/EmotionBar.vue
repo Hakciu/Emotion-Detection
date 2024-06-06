@@ -1,14 +1,3 @@
-<template>
-    <div class="emotion-bar">
-        <span class="icon">{{ icon }}</span>
-        <div class="bar-container">
-            <div class="bar" :style="{ width: probability + '%' }"></div>
-            <span class="percentage">{{ probability }}%</span>
-        </div>
-        <span class="emotion-name">{{ emotionName }}</span>
-    </div>
-</template>
-
 <script setup>
     import { defineProps } from 'vue'
 
@@ -27,6 +16,17 @@
         },
     })
 </script>
+
+<template>
+    <div class="emotion-bar">
+        <span class="icon">{{ icon }}</span>
+        <div class="bar-container">
+            <div class="bar" :style="{ width: probability + '%' }"></div>
+            <span class="percentage">{{ probability }}%</span>
+        </div>
+        <span class="emotion-name">{{ emotionName }}</span>
+    </div>
+</template>
 
 <style scoped>
     .emotion-bar {

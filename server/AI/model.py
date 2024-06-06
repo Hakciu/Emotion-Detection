@@ -2,6 +2,22 @@ import torch
 import torch.nn as nn
 
 class EmotionCNN(nn.Module):
+    """
+    EmotionCNN is a convolutional neural network model for emotion detection.
+
+    Args:
+        input_shape (int): The number of input channels.
+        hidden_units (int): The number of hidden units in the convolutional layers.
+        output_shape (int): The number of output classes.
+
+    Attributes:
+        conv_block_1 (nn.Sequential): The first convolutional block.
+        conv_block_2 (nn.Sequential): The second convolutional block.
+        conv_block_3 (nn.Sequential): The third convolutional block.
+        classifier (nn.Sequential): The fully connected classifier.
+
+    """
+
     def __init__(self, input_shape: int, hidden_units: int, output_shape: int):
         super(EmotionCNN, self).__init__()
         self.conv_block_1 = nn.Sequential(

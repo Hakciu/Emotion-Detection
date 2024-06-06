@@ -48,10 +48,29 @@ class_names = ["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"
 
 @app.get("/")
 def read_root():
+    """
+    Returns a JSON response with a welcome message for the Emotion Detection API.
+
+    Returns:
+        dict: A dictionary containing the welcome message.
+    """
     return {"message": "Welcome to the Emotion Detection API"}
+
 
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
+    """
+    Endpoint for predicting the emotion in an image.
+
+    Parameters:
+    - file: UploadFile object representing the image file to be processed.
+
+    Returns:
+    - JSON response containing the predicted emotion and probabilities for each class.
+
+    Raises:
+    - HTTPException with status code 500 if there is an error processing the image.
+    """
     try:
         print("Received file:", file.filename)
         image = Image.open(io.BytesIO(await file.read())).convert('L')
@@ -82,6 +101,16 @@ with open("memes.json", "r") as file:
 
 @app.get("/random_meme/{emotion}")
 async def random_meme(emotion: str):
+    """
+    Endpoint for retrieving a random meme based on the specified emotion.
+
+    Parameters:
+    - emotion: A string representing the emotion for which a random meme is requested.
+
+    Returns:
+    - JSON response containing the URL of a random meme for the specified emotion.
+
+    """
     print(f"Received request for emotion: {emotion}")
     if emotion in memes:
         meme_url = random.choice(memes[emotion])
